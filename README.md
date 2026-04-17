@@ -39,7 +39,8 @@ Where DFW is American Airlines' largest hub, and A and B can be any airport in t
 |--------|-------------|------|
 | FAA ASPM | Airport-level flight performance metrics, scheduling patterns, and NAS delay rates | https://aspm.faa.gov |
 | BTS On-Time Performance | Flight-level delay records, weather delay codes, and tail numbers for crew chain reconstruction | https://www.transtats.bts.gov |
-| Aviation Weather Center | Historical METAR observations including ceiling height, visibility, wind speed, and precipitation type | https://aviationweather.gov |
+| Iowa State ASOS Archive | Historical METAR observations including visibility, wind speed, ceiling height, and precipitation type for 2025 | https://mesonet.agron.iastate.edu |
+| Aviation Weather Center | Aviation-specific weather products and real-time METAR cache | https://aviationweather.gov |
 | NOAA | Historical and seasonal weather data for correlating meteorological conditions with delay patterns | https://www.weather.gov |
 | FAR Part 117 (FAA) | Regulatory duty time limits and rest minimums encoded as fixed constraints | Hardcoded thresholds — no download required |
 
@@ -58,11 +59,22 @@ Our model identifies high-risk airport pairings by combining three core dimensio
 ## Repository Structure
 
 ```
-├── data/               # Raw and processed datasets
-├── notebooks/          # Exploratory data analysis and modeling notebooks
-├── src/                # Feature engineering and model pipeline
-├── outputs/            # Results, predictions, and visualizations
-├── report/             # Final team report (PDF)
+├── Data/
+│   ├── Monthly Data/           # BTS On-Time Performance CSVs (Jan–Dec 2025)
+│   ├── BTS Yearly/             # BTS annual delay cause breakdown
+│   └── weather-AWC/
+│       ├── raw/                # Raw METAR cache files
+│       └── processed/          # Cleaned weather data (weather_all_airports_clean.csv)
+├── weather-NOAA/
+│   └── metar_2025.csv          # Iowa State ASOS historical METAR data
+├── embedding_model.py          # Main model training and data preparation pipeline
+├── visualize_embeddings.py     # PCA embedding visualization and risk analysis
+├── airport_features.csv        # Cleaned ASPM airport statistics
+├── DFW_sequences_enriched.csv  # Final enriched sequence dataset
+├── embedding_model.pth         # Trained model weights
+├── airport_label_encoder.npy   # Airport label encoder classes
+├── airport_embeddings.png      # Embedding visualization output
+├── training_loss.png           # Training loss curve
 └── README.md
 ```
 

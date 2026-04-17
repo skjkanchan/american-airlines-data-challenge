@@ -69,6 +69,8 @@ Our model identifies high-risk airport pairings by combining three core dimensio
 │   └── metar_2025.csv          # Iowa State ASOS historical METAR data
 ├── embedding_model.py          # Main model training and data preparation pipeline
 ├── visualize_embeddings.py     # PCA embedding visualization and risk analysis
+├── generate_pairings.py        # Inference script to score all airport pairs and generate ranked avoid list
+├── risky_pairings.csv          # Ranked avoid list — 15,006 airport combinations scored by cascade probability
 ├── airport_features.csv        # Cleaned ASPM airport statistics
 ├── DFW_sequences_enriched.csv  # Final enriched sequence dataset
 ├── embedding_model.pth         # Trained model weights

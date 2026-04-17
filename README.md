@@ -71,6 +71,3 @@ Our model identifies high-risk airport pairings by combining three core dimensio
 ## Competition Details
 
 - **Hosted by:** UTD EPPS & American Airlines
-- **Submission Deadline:** April 17, 2025 by 5:00 PM
-- **Format:** Team report (Word or PDF, max 20 pages)
-- **Contact:** Jose Ramirez-Hernandez — Jose.Ramirez-hernandez@aa.com

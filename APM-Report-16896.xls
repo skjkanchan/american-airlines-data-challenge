@@ -1,0 +1,897 @@
+<!-- -->
+
+<!-- -->
+<html><head><title>ASPM Report</title><style>
+body, td {font-family:Arial,Verdana,Helvetica,sans-serif;font-size:10pt;color: #333;}
+h1 {color:#004080;}
+thead {display:table-header-group;}
+.info {font-size:80%;}
+.infoX {font-size:90%;}
+.table_header {text-align:center; background-color:#C0E4FE; font-weight:bold; color:#004080;}
+.table_header_right {text-align:right; background-color:#C0E4FE; font-weight:bold; color:#004080;}
+.table_header_left {text-align:left; background-color:#C0E4FE; font-weight:bold; color:#004080;}
+.table_subtotal {text-align:right; color:black; background-color:#dfdfdf;}
+.table_subtotal_lead {text-align:left; color:black; background-color:#dfdfdf;}
+.table_footer {text-align:right; background-color:#C0E4FE; font-weight:bold; color: #004080;}
+.table_footer_lead {text-align:left; background-color:#C0E4FE; font-weight:bold; color:#004080;}
+.table_footer_mid {text-align:center; background-color:#C0E4FE; font-weight:bold; color:#004080;}
+</style>
+<script language="JavaScript" src="/js/jquery-1.7.js" type="text/javascript"></script>
+<script language="JavaScript" src="/js/ExcelFriendly.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="https://www.aspm.faa.gov/images/favicon.ico" type="image/x-icon">
+</head><body>
+<table border=0 cellpadding=4 cellspacing=0 width="100%">
+<thead>
+<tr><td colspan=11><h1>ASPM : Airport Analysis : Delayed Flights Report</h1><span class="infoX">From 01/2024 To 12/2025 ; Airport=ATL, BOS, BWI, CLT, DCA, DEN, DFW, DTW, EWR, FLL, HNL, IAD, IAH, JFK, LAS, LAX, LGA, MCO, MDW, MEM, MIA, MSP, ORD, PHL, PHX, SAN, SEA, SFO, SLC, TPA : Use Flight Plan</span></td></tr>
+<tr>
+<td nowrap class="table_header" style=text-align:left;>Facility</td>
+<td nowrap class="table_header" style=text-align:left;>Calendar<br>Year</td>
+<td nowrap class="table_header" style="text-align:right">Scheduled<br>Departures</td>
+<td nowrap class="table_header" style="text-align:right">Departures<br>For Metric<br>Computation</td>
+<td nowrap class="table_header" style="text-align:right">Delayed<br>Gate<br>Departures</td>
+<td nowrap class="table_header" style="text-align:right">% Delayed<br>Gate<br>Departures</td>
+<td nowrap class="table_header" style="text-align:right">Average<br>Minutes<br>Of Delay<br>Per Delayed<br>Gate<br>Departure</td>
+<td nowrap class="table_header" style="text-align:right">Scheduled<br>Arrivals</td>
+<td nowrap class="table_header" style="text-align:right">Arrivals<br>For Metric<br>Computation</td>
+<td nowrap class="table_header" style="text-align:right">Delayed<br>Gate<br>Arrivals</td>
+<td nowrap class="table_header" style="text-align:right">% Delayed<br>Gate<br>Arrivals</td>
+<td nowrap class="table_header" style="text-align:right">Average<br>Minutes<br>Of Delay<br>Per Delayed<br>Gate<br>Arrival</td>
+</tr>
+</thead>
+<tr>
+<td nowrap style=text-align:left;> ATL</td>
+<td nowrap style=text-align:left;>2024</td>
+<td nowrap align=right>383,767</td>
+<td nowrap align=right>393,998</td>
+<td nowrap align=right>65,163</td>
+<td nowrap align=right>16.54</td>
+<td nowrap align=right>42.26</td>
+<td nowrap align=right>383,090</td>
+<td nowrap align=right>393,904</td>
+<td nowrap align=right>53,460</td>
+<td nowrap align=right>13.57</td>
+<td nowrap align=right>52.23</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> ATL</td>
+<td nowrap style=text-align:left;>2025</td>
+<td nowrap align=right>391,746</td>
+<td nowrap align=right>399,706</td>
+<td nowrap align=right>72,795</td>
+<td nowrap align=right>18.21</td>
+<td nowrap align=right>44.79</td>
+<td nowrap align=right>391,147</td>
+<td nowrap align=right>399,954</td>
+<td nowrap align=right>56,083</td>
+<td nowrap align=right>14.02</td>
+<td nowrap align=right>55.48</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> BOS</td>
+<td nowrap style=text-align:left;>2024</td>
+<td nowrap align=right>188,962</td>
+<td nowrap align=right>205,083</td>
+<td nowrap align=right>35,307</td>
+<td nowrap align=right>17.22</td>
+<td nowrap align=right>43.06</td>
+<td nowrap align=right>188,964</td>
+<td nowrap align=right>204,874</td>
+<td nowrap align=right>34,898</td>
+<td nowrap align=right>17.03</td>
+<td nowrap align=right>49.62</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> BOS</td>
+<td nowrap style=text-align:left;>2025</td>
+<td nowrap align=right>192,097</td>
+<td nowrap align=right>205,866</td>
+<td nowrap align=right>36,835</td>
+<td nowrap align=right>17.89</td>
+<td nowrap align=right>44.81</td>
+<td nowrap align=right>191,670</td>
+<td nowrap align=right>205,314</td>
+<td nowrap align=right>39,155</td>
+<td nowrap align=right>19.07</td>
+<td nowrap align=right>51.06</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> BWI</td>
+<td nowrap style=text-align:left;>2024</td>
+<td nowrap align=right>104,638</td>
+<td nowrap align=right>115,181</td>
+<td nowrap align=right>27,786</td>
+<td nowrap align=right>24.12</td>
+<td nowrap align=right>38.18</td>
+<td nowrap align=right>104,644</td>
+<td nowrap align=right>115,122</td>
+<td nowrap align=right>19,563</td>
+<td nowrap align=right>16.99</td>
+<td nowrap align=right>43.60</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> BWI</td>
+<td nowrap style=text-align:left;>2025</td>
+<td nowrap align=right>101,145</td>
+<td nowrap align=right>112,968</td>
+<td nowrap align=right>24,125</td>
+<td nowrap align=right>21.36</td>
+<td nowrap align=right>42.89</td>
+<td nowrap align=right>101,152</td>
+<td nowrap align=right>113,045</td>
+<td nowrap align=right>20,043</td>
+<td nowrap align=right>17.73</td>
+<td nowrap align=right>47.24</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> CLT</td>
+<td nowrap style=text-align:left;>2024</td>
+<td nowrap align=right>272,229</td>
+<td nowrap align=right>281,945</td>
+<td nowrap align=right>55,467</td>
+<td nowrap align=right>19.67</td>
+<td nowrap align=right>45.05</td>
+<td nowrap align=right>272,290</td>
+<td nowrap align=right>281,915</td>
+<td nowrap align=right>43,818</td>
+<td nowrap align=right>15.54</td>
+<td nowrap align=right>48.62</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> CLT</td>
+<td nowrap style=text-align:left;>2025</td>
+<td nowrap align=right>262,962</td>
+<td nowrap align=right>272,043</td>
+<td nowrap align=right>47,518</td>
+<td nowrap align=right>17.47</td>
+<td nowrap align=right>45.55</td>
+<td nowrap align=right>262,960</td>
+<td nowrap align=right>272,043</td>
+<td nowrap align=right>36,132</td>
+<td nowrap align=right>13.28</td>
+<td nowrap align=right>51.90</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> DCA</td>
+<td nowrap style=text-align:left;>2024</td>
+<td nowrap align=right>147,528</td>
+<td nowrap align=right>147,287</td>
+<td nowrap align=right>20,470</td>
+<td nowrap align=right>13.90</td>
+<td nowrap align=right>43.39</td>
+<td nowrap align=right>147,393</td>
+<td nowrap align=right>147,473</td>
+<td nowrap align=right>22,663</td>
+<td nowrap align=right>15.37</td>
+<td nowrap align=right>49.60</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> DCA</td>
+<td nowrap style=text-align:left;>2025</td>
+<td nowrap align=right>151,247</td>
+<td nowrap align=right>147,506</td>
+<td nowrap align=right>26,092</td>
+<td nowrap align=right>17.69</td>
+<td nowrap align=right>46.83</td>
+<td nowrap align=right>151,255</td>
+<td nowrap align=right>147,972</td>
+<td nowrap align=right>29,975</td>
+<td nowrap align=right>20.26</td>
+<td nowrap align=right>54.73</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> DEN</td>
+<td nowrap style=text-align:left;>2024</td>
+<td nowrap align=right>329,905</td>
+<td nowrap align=right>346,251</td>
+<td nowrap align=right>64,730</td>
+<td nowrap align=right>18.69</td>
+<td nowrap align=right>40.05</td>
+<td nowrap align=right>329,935</td>
+<td nowrap align=right>346,459</td>
+<td nowrap align=right>50,752</td>
+<td nowrap align=right>14.65</td>
+<td nowrap align=right>47.91</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> DEN</td>
+<td nowrap style=text-align:left;>2025</td>
+<td nowrap align=right>335,383</td>
+<td nowrap align=right>353,054</td>
+<td nowrap align=right>68,249</td>
+<td nowrap align=right>19.33</td>
+<td nowrap align=right>41.89</td>
+<td nowrap align=right>335,473</td>
+<td nowrap align=right>352,640</td>
+<td nowrap align=right>67,255</td>
+<td nowrap align=right>19.07</td>
+<td nowrap align=right>56.65</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> DFW</td>
+<td nowrap style=text-align:left;>2024</td>
+<td nowrap align=right>358,472</td>
+<td nowrap align=right>367,983</td>
+<td nowrap align=right>77,611</td>
+<td nowrap align=right>21.09</td>
+<td nowrap align=right>45.23</td>
+<td nowrap align=right>358,501</td>
+<td nowrap align=right>368,159</td>
+<td nowrap align=right>61,794</td>
+<td nowrap align=right>16.78</td>
+<td nowrap align=right>56.32</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> DFW</td>
+<td nowrap style=text-align:left;>2025</td>
+<td nowrap align=right>362,141</td>
+<td nowrap align=right>368,700</td>
+<td nowrap align=right>80,083</td>
+<td nowrap align=right>21.72</td>
+<td nowrap align=right>45.55</td>
+<td nowrap align=right>362,147</td>
+<td nowrap align=right>369,221</td>
+<td nowrap align=right>63,953</td>
+<td nowrap align=right>17.32</td>
+<td nowrap align=right>58.17</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> DTW</td>
+<td nowrap style=text-align:left;>2024</td>
+<td nowrap align=right>144,729</td>
+<td nowrap align=right>149,427</td>
+<td nowrap align=right>21,127</td>
+<td nowrap align=right>14.14</td>
+<td nowrap align=right>44.74</td>
+<td nowrap align=right>144,718</td>
+<td nowrap align=right>149,367</td>
+<td nowrap align=right>20,716</td>
+<td nowrap align=right>13.87</td>
+<td nowrap align=right>54.92</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> DTW</td>
+<td nowrap style=text-align:left;>2025</td>
+<td nowrap align=right>154,362</td>
+<td nowrap align=right>158,771</td>
+<td nowrap align=right>22,628</td>
+<td nowrap align=right>14.25</td>
+<td nowrap align=right>47.04</td>
+<td nowrap align=right>154,353</td>
+<td nowrap align=right>158,721</td>
+<td nowrap align=right>22,405</td>
+<td nowrap align=right>14.12</td>
+<td nowrap align=right>54.05</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> EWR</td>
+<td nowrap style=text-align:left;>2024</td>
+<td nowrap align=right>193,900</td>
+<td nowrap align=right>207,510</td>
+<td nowrap align=right>38,519</td>
+<td nowrap align=right>18.56</td>
+<td nowrap align=right>47.70</td>
+<td nowrap align=right>193,567</td>
+<td nowrap align=right>207,553</td>
+<td nowrap align=right>34,321</td>
+<td nowrap align=right>16.54</td>
+<td nowrap align=right>60.40</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> EWR</td>
+<td nowrap style=text-align:left;>2025</td>
+<td nowrap align=right>185,565</td>
+<td nowrap align=right>196,311</td>
+<td nowrap align=right>37,136</td>
+<td nowrap align=right>18.92</td>
+<td nowrap align=right>49.21</td>
+<td nowrap align=right>185,101</td>
+<td nowrap align=right>196,563</td>
+<td nowrap align=right>38,360</td>
+<td nowrap align=right>19.52</td>
+<td nowrap align=right>65.39</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> FLL</td>
+<td nowrap style=text-align:left;>2024</td>
+<td nowrap align=right>121,626</td>
+<td nowrap align=right>133,541</td>
+<td nowrap align=right>31,408</td>
+<td nowrap align=right>23.52</td>
+<td nowrap align=right>41.90</td>
+<td nowrap align=right>121,571</td>
+<td nowrap align=right>133,193</td>
+<td nowrap align=right>27,153</td>
+<td nowrap align=right>20.39</td>
+<td nowrap align=right>49.66</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> FLL</td>
+<td nowrap style=text-align:left;>2025</td>
+<td nowrap align=right>114,513</td>
+<td nowrap align=right>126,686</td>
+<td nowrap align=right>26,646</td>
+<td nowrap align=right>21.03</td>
+<td nowrap align=right>44.42</td>
+<td nowrap align=right>114,613</td>
+<td nowrap align=right>126,324</td>
+<td nowrap align=right>26,272</td>
+<td nowrap align=right>20.80</td>
+<td nowrap align=right>50.96</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> HNL</td>
+<td nowrap style=text-align:left;>2024</td>
+<td nowrap align=right>81,365</td>
+<td nowrap align=right>106,228</td>
+<td nowrap align=right>11,502</td>
+<td nowrap align=right>10.83</td>
+<td nowrap align=right>30.11</td>
+<td nowrap align=right>81,399</td>
+<td nowrap align=right>102,590</td>
+<td nowrap align=right>16,645</td>
+<td nowrap align=right>16.22</td>
+<td nowrap align=right>85.40</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> HNL</td>
+<td nowrap style=text-align:left;>2025</td>
+<td nowrap align=right>83,095</td>
+<td nowrap align=right>102,724</td>
+<td nowrap align=right>9,762</td>
+<td nowrap align=right>9.50</td>
+<td nowrap align=right>31.74</td>
+<td nowrap align=right>83,158</td>
+<td nowrap align=right>98,822</td>
+<td nowrap align=right>13,846</td>
+<td nowrap align=right>14.01</td>
+<td nowrap align=right>67.83</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> IAD</td>
+<td nowrap style=text-align:left;>2024</td>
+<td nowrap align=right>115,901</td>
+<td nowrap align=right>139,163</td>
+<td nowrap align=right>27,153</td>
+<td nowrap align=right>19.51</td>
+<td nowrap align=right>44.13</td>
+<td nowrap align=right>115,651</td>
+<td nowrap align=right>139,906</td>
+<td nowrap align=right>26,925</td>
+<td nowrap align=right>19.25</td>
+<td nowrap align=right>56.95</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> IAD</td>
+<td nowrap style=text-align:left;>2025</td>
+<td nowrap align=right>128,695</td>
+<td nowrap align=right>154,355</td>
+<td nowrap align=right>32,519</td>
+<td nowrap align=right>21.07</td>
+<td nowrap align=right>48.43</td>
+<td nowrap align=right>128,418</td>
+<td nowrap align=right>155,454</td>
+<td nowrap align=right>32,389</td>
+<td nowrap align=right>20.84</td>
+<td nowrap align=right>55.33</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> IAH</td>
+<td nowrap style=text-align:left;>2024</td>
+<td nowrap align=right>211,699</td>
+<td nowrap align=right>219,291</td>
+<td nowrap align=right>43,958</td>
+<td nowrap align=right>20.05</td>
+<td nowrap align=right>47.39</td>
+<td nowrap align=right>211,815</td>
+<td nowrap align=right>219,201</td>
+<td nowrap align=right>38,040</td>
+<td nowrap align=right>17.35</td>
+<td nowrap align=right>57.31</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> IAH</td>
+<td nowrap style=text-align:left;>2025</td>
+<td nowrap align=right>215,829</td>
+<td nowrap align=right>225,219</td>
+<td nowrap align=right>40,739</td>
+<td nowrap align=right>18.09</td>
+<td nowrap align=right>48.04</td>
+<td nowrap align=right>215,774</td>
+<td nowrap align=right>224,648</td>
+<td nowrap align=right>37,877</td>
+<td nowrap align=right>16.86</td>
+<td nowrap align=right>54.29</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> JFK</td>
+<td nowrap style=text-align:left;>2024</td>
+<td nowrap align=right>214,897</td>
+<td nowrap align=right>228,680</td>
+<td nowrap align=right>40,547</td>
+<td nowrap align=right>17.73</td>
+<td nowrap align=right>44.07</td>
+<td nowrap align=right>213,983</td>
+<td nowrap align=right>230,063</td>
+<td nowrap align=right>35,347</td>
+<td nowrap align=right>15.36</td>
+<td nowrap align=right>68.65</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> JFK</td>
+<td nowrap style=text-align:left;>2025</td>
+<td nowrap align=right>217,279</td>
+<td nowrap align=right>226,112</td>
+<td nowrap align=right>38,438</td>
+<td nowrap align=right>17.00</td>
+<td nowrap align=right>46.62</td>
+<td nowrap align=right>216,401</td>
+<td nowrap align=right>227,277</td>
+<td nowrap align=right>35,466</td>
+<td nowrap align=right>15.60</td>
+<td nowrap align=right>64.94</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> LAS</td>
+<td nowrap style=text-align:left;>2024</td>
+<td nowrap align=right>205,440</td>
+<td nowrap align=right>231,790</td>
+<td nowrap align=right>44,308</td>
+<td nowrap align=right>19.12</td>
+<td nowrap align=right>38.83</td>
+<td nowrap align=right>205,498</td>
+<td nowrap align=right>231,434</td>
+<td nowrap align=right>48,761</td>
+<td nowrap align=right>21.07</td>
+<td nowrap align=right>46.43</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> LAS</td>
+<td nowrap style=text-align:left;>2025</td>
+<td nowrap align=right>200,253</td>
+<td nowrap align=right>227,909</td>
+<td nowrap align=right>42,555</td>
+<td nowrap align=right>18.67</td>
+<td nowrap align=right>39.45</td>
+<td nowrap align=right>200,234</td>
+<td nowrap align=right>227,628</td>
+<td nowrap align=right>43,573</td>
+<td nowrap align=right>19.14</td>
+<td nowrap align=right>46.80</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> LAX</td>
+<td nowrap style=text-align:left;>2024</td>
+<td nowrap align=right>264,120</td>
+<td nowrap align=right>284,763</td>
+<td nowrap align=right>47,454</td>
+<td nowrap align=right>16.66</td>
+<td nowrap align=right>40.58</td>
+<td nowrap align=right>264,401</td>
+<td nowrap align=right>281,617</td>
+<td nowrap align=right>52,706</td>
+<td nowrap align=right>18.72</td>
+<td nowrap align=right>50.14</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> LAX</td>
+<td nowrap style=text-align:left;>2025</td>
+<td nowrap align=right>264,411</td>
+<td nowrap align=right>284,180</td>
+<td nowrap align=right>43,972</td>
+<td nowrap align=right>15.47</td>
+<td nowrap align=right>42.69</td>
+<td nowrap align=right>264,840</td>
+<td nowrap align=right>284,036</td>
+<td nowrap align=right>47,706</td>
+<td nowrap align=right>16.80</td>
+<td nowrap align=right>47.63</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> LGA</td>
+<td nowrap style=text-align:left;>2024</td>
+<td nowrap align=right>175,918</td>
+<td nowrap align=right>175,576</td>
+<td nowrap align=right>22,607</td>
+<td nowrap align=right>12.88</td>
+<td nowrap align=right>45.34</td>
+<td nowrap align=right>175,965</td>
+<td nowrap align=right>175,695</td>
+<td nowrap align=right>26,737</td>
+<td nowrap align=right>15.22</td>
+<td nowrap align=right>55.28</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> LGA</td>
+<td nowrap style=text-align:left;>2025</td>
+<td nowrap align=right>178,373</td>
+<td nowrap align=right>176,770</td>
+<td nowrap align=right>27,581</td>
+<td nowrap align=right>15.60</td>
+<td nowrap align=right>47.16</td>
+<td nowrap align=right>178,366</td>
+<td nowrap align=right>177,046</td>
+<td nowrap align=right>34,292</td>
+<td nowrap align=right>19.37</td>
+<td nowrap align=right>57.82</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> MCO</td>
+<td nowrap style=text-align:left;>2024</td>
+<td nowrap align=right>190,258</td>
+<td nowrap align=right>199,053</td>
+<td nowrap align=right>34,063</td>
+<td nowrap align=right>17.11</td>
+<td nowrap align=right>42.55</td>
+<td nowrap align=right>190,288</td>
+<td nowrap align=right>199,021</td>
+<td nowrap align=right>37,295</td>
+<td nowrap align=right>18.74</td>
+<td nowrap align=right>50.39</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> MCO</td>
+<td nowrap style=text-align:left;>2025</td>
+<td nowrap align=right>193,127</td>
+<td nowrap align=right>203,279</td>
+<td nowrap align=right>34,069</td>
+<td nowrap align=right>16.76</td>
+<td nowrap align=right>46.20</td>
+<td nowrap align=right>193,099</td>
+<td nowrap align=right>203,299</td>
+<td nowrap align=right>39,119</td>
+<td nowrap align=right>19.24</td>
+<td nowrap align=right>51.83</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> MDW</td>
+<td nowrap style=text-align:left;>2024</td>
+<td nowrap align=right>83,216</td>
+<td nowrap align=right>98,236</td>
+<td nowrap align=right>22,380</td>
+<td nowrap align=right>22.78</td>
+<td nowrap align=right>39.13</td>
+<td nowrap align=right>83,210</td>
+<td nowrap align=right>98,306</td>
+<td nowrap align=right>18,661</td>
+<td nowrap align=right>18.98</td>
+<td nowrap align=right>45.21</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> MDW</td>
+<td nowrap style=text-align:left;>2025</td>
+<td nowrap align=right>77,173</td>
+<td nowrap align=right>93,105</td>
+<td nowrap align=right>21,077</td>
+<td nowrap align=right>22.64</td>
+<td nowrap align=right>39.91</td>
+<td nowrap align=right>77,176</td>
+<td nowrap align=right>93,076</td>
+<td nowrap align=right>18,980</td>
+<td nowrap align=right>20.39</td>
+<td nowrap align=right>46.86</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> MEM</td>
+<td nowrap style=text-align:left;>2024</td>
+<td nowrap align=right>24,915</td>
+<td nowrap align=right>92,650</td>
+<td nowrap align=right>29,454</td>
+<td nowrap align=right>31.79</td>
+<td nowrap align=right>37.49</td>
+<td nowrap align=right>24,909</td>
+<td nowrap align=right>92,614</td>
+<td nowrap align=right>20,517</td>
+<td nowrap align=right>22.15</td>
+<td nowrap align=right>40.16</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> MEM</td>
+<td nowrap style=text-align:left;>2025</td>
+<td nowrap align=right>26,922</td>
+<td nowrap align=right>81,205</td>
+<td nowrap align=right>24,656</td>
+<td nowrap align=right>30.36</td>
+<td nowrap align=right>37.92</td>
+<td nowrap align=right>26,922</td>
+<td nowrap align=right>80,468</td>
+<td nowrap align=right>18,417</td>
+<td nowrap align=right>22.89</td>
+<td nowrap align=right>40.92</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> MIA</td>
+<td nowrap style=text-align:left;>2024</td>
+<td nowrap align=right>195,886</td>
+<td nowrap align=right>234,460</td>
+<td nowrap align=right>59,197</td>
+<td nowrap align=right>25.25</td>
+<td nowrap align=right>46.94</td>
+<td nowrap align=right>192,599</td>
+<td nowrap align=right>233,560</td>
+<td nowrap align=right>40,962</td>
+<td nowrap align=right>17.54</td>
+<td nowrap align=right>50.38</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> MIA</td>
+<td nowrap style=text-align:left;>2025</td>
+<td nowrap align=right>201,339</td>
+<td nowrap align=right>241,874</td>
+<td nowrap align=right>55,381</td>
+<td nowrap align=right>22.90</td>
+<td nowrap align=right>48.38</td>
+<td nowrap align=right>198,590</td>
+<td nowrap align=right>241,071</td>
+<td nowrap align=right>41,766</td>
+<td nowrap align=right>17.33</td>
+<td nowrap align=right>51.47</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> MSP</td>
+<td nowrap style=text-align:left;>2024</td>
+<td nowrap align=right>153,237</td>
+<td nowrap align=right>166,641</td>
+<td nowrap align=right>25,168</td>
+<td nowrap align=right>15.10</td>
+<td nowrap align=right>42.45</td>
+<td nowrap align=right>153,237</td>
+<td nowrap align=right>166,581</td>
+<td nowrap align=right>25,663</td>
+<td nowrap align=right>15.41</td>
+<td nowrap align=right>52.94</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> MSP</td>
+<td nowrap style=text-align:left;>2025</td>
+<td nowrap align=right>153,417</td>
+<td nowrap align=right>166,934</td>
+<td nowrap align=right>25,146</td>
+<td nowrap align=right>15.06</td>
+<td nowrap align=right>44.59</td>
+<td nowrap align=right>153,369</td>
+<td nowrap align=right>166,046</td>
+<td nowrap align=right>25,475</td>
+<td nowrap align=right>15.34</td>
+<td nowrap align=right>51.63</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> ORD</td>
+<td nowrap style=text-align:left;>2024</td>
+<td nowrap align=right>376,075</td>
+<td nowrap align=right>385,589</td>
+<td nowrap align=right>69,648</td>
+<td nowrap align=right>18.06</td>
+<td nowrap align=right>44.57</td>
+<td nowrap align=right>370,906</td>
+<td nowrap align=right>385,972</td>
+<td nowrap align=right>63,045</td>
+<td nowrap align=right>16.33</td>
+<td nowrap align=right>58.40</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> ORD</td>
+<td nowrap style=text-align:left;>2025</td>
+<td nowrap align=right>417,500</td>
+<td nowrap align=right>426,132</td>
+<td nowrap align=right>88,970</td>
+<td nowrap align=right>20.88</td>
+<td nowrap align=right>46.18</td>
+<td nowrap align=right>412,073</td>
+<td nowrap align=right>427,279</td>
+<td nowrap align=right>83,198</td>
+<td nowrap align=right>19.47</td>
+<td nowrap align=right>56.73</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> PHL</td>
+<td nowrap style=text-align:left;>2024</td>
+<td nowrap align=right>137,648</td>
+<td nowrap align=right>156,795</td>
+<td nowrap align=right>24,845</td>
+<td nowrap align=right>15.85</td>
+<td nowrap align=right>45.66</td>
+<td nowrap align=right>137,653</td>
+<td nowrap align=right>156,886</td>
+<td nowrap align=right>27,776</td>
+<td nowrap align=right>17.70</td>
+<td nowrap align=right>47.96</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> PHL</td>
+<td nowrap style=text-align:left;>2025</td>
+<td nowrap align=right>138,691</td>
+<td nowrap align=right>157,032</td>
+<td nowrap align=right>26,550</td>
+<td nowrap align=right>16.91</td>
+<td nowrap align=right>47.50</td>
+<td nowrap align=right>138,679</td>
+<td nowrap align=right>157,163</td>
+<td nowrap align=right>29,005</td>
+<td nowrap align=right>18.46</td>
+<td nowrap align=right>51.83</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> PHX</td>
+<td nowrap style=text-align:left;>2024</td>
+<td nowrap align=right>211,631</td>
+<td nowrap align=right>226,941</td>
+<td nowrap align=right>34,282</td>
+<td nowrap align=right>15.11</td>
+<td nowrap align=right>40.41</td>
+<td nowrap align=right>211,638</td>
+<td nowrap align=right>226,758</td>
+<td nowrap align=right>33,526</td>
+<td nowrap align=right>14.78</td>
+<td nowrap align=right>42.92</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> PHX</td>
+<td nowrap style=text-align:left;>2025</td>
+<td nowrap align=right>213,954</td>
+<td nowrap align=right>228,848</td>
+<td nowrap align=right>33,962</td>
+<td nowrap align=right>14.84</td>
+<td nowrap align=right>41.11</td>
+<td nowrap align=right>213,960</td>
+<td nowrap align=right>229,011</td>
+<td nowrap align=right>34,134</td>
+<td nowrap align=right>14.90</td>
+<td nowrap align=right>46.34</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> SAN</td>
+<td nowrap style=text-align:left;>2024</td>
+<td nowrap align=right>99,970</td>
+<td nowrap align=right>108,328</td>
+<td nowrap align=right>18,037</td>
+<td nowrap align=right>16.65</td>
+<td nowrap align=right>42.05</td>
+<td nowrap align=right>99,920</td>
+<td nowrap align=right>108,384</td>
+<td nowrap align=right>22,964</td>
+<td nowrap align=right>21.19</td>
+<td nowrap align=right>45.69</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> SAN</td>
+<td nowrap style=text-align:left;>2025</td>
+<td nowrap align=right>103,739</td>
+<td nowrap align=right>111,555</td>
+<td nowrap align=right>18,900</td>
+<td nowrap align=right>16.94</td>
+<td nowrap align=right>40.78</td>
+<td nowrap align=right>103,772</td>
+<td nowrap align=right>111,485</td>
+<td nowrap align=right>22,993</td>
+<td nowrap align=right>20.62</td>
+<td nowrap align=right>44.06</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> SEA</td>
+<td nowrap style=text-align:left;>2024</td>
+<td nowrap align=right>208,536</td>
+<td nowrap align=right>216,546</td>
+<td nowrap align=right>33,921</td>
+<td nowrap align=right>15.66</td>
+<td nowrap align=right>37.03</td>
+<td nowrap align=right>208,647</td>
+<td nowrap align=right>216,954</td>
+<td nowrap align=right>33,340</td>
+<td nowrap align=right>15.37</td>
+<td nowrap align=right>49.20</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> SEA</td>
+<td nowrap style=text-align:left;>2025</td>
+<td nowrap align=right>209,727</td>
+<td nowrap align=right>217,668</td>
+<td nowrap align=right>35,604</td>
+<td nowrap align=right>16.36</td>
+<td nowrap align=right>38.38</td>
+<td nowrap align=right>209,544</td>
+<td nowrap align=right>217,800</td>
+<td nowrap align=right>35,043</td>
+<td nowrap align=right>16.09</td>
+<td nowrap align=right>45.08</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> SFO</td>
+<td nowrap style=text-align:left;>2024</td>
+<td nowrap align=right>175,784</td>
+<td nowrap align=right>187,278</td>
+<td nowrap align=right>39,418</td>
+<td nowrap align=right>21.05</td>
+<td nowrap align=right>40.91</td>
+<td nowrap align=right>176,686</td>
+<td nowrap align=right>187,763</td>
+<td nowrap align=right>46,736</td>
+<td nowrap align=right>24.89</td>
+<td nowrap align=right>51.01</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> SFO</td>
+<td nowrap style=text-align:left;>2025</td>
+<td nowrap align=right>187,669</td>
+<td nowrap align=right>201,288</td>
+<td nowrap align=right>33,600</td>
+<td nowrap align=right>16.69</td>
+<td nowrap align=right>42.05</td>
+<td nowrap align=right>188,482</td>
+<td nowrap align=right>201,781</td>
+<td nowrap align=right>40,968</td>
+<td nowrap align=right>20.30</td>
+<td nowrap align=right>49.20</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> SLC</td>
+<td nowrap style=text-align:left;>2024</td>
+<td nowrap align=right>118,187</td>
+<td nowrap align=right>135,152</td>
+<td nowrap align=right>20,669</td>
+<td nowrap align=right>15.29</td>
+<td nowrap align=right>42.46</td>
+<td nowrap align=right>118,212</td>
+<td nowrap align=right>135,047</td>
+<td nowrap align=right>20,640</td>
+<td nowrap align=right>15.28</td>
+<td nowrap align=right>45.15</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> SLC</td>
+<td nowrap style=text-align:left;>2025</td>
+<td nowrap align=right>121,936</td>
+<td nowrap align=right>139,130</td>
+<td nowrap align=right>19,240</td>
+<td nowrap align=right>13.83</td>
+<td nowrap align=right>43.42</td>
+<td nowrap align=right>121,936</td>
+<td nowrap align=right>139,058</td>
+<td nowrap align=right>20,259</td>
+<td nowrap align=right>14.57</td>
+<td nowrap align=right>46.12</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> TPA</td>
+<td nowrap style=text-align:left;>2024</td>
+<td nowrap align=right>91,137</td>
+<td nowrap align=right>100,537</td>
+<td nowrap align=right>13,999</td>
+<td nowrap align=right>13.92</td>
+<td nowrap align=right>43.21</td>
+<td nowrap align=right>91,174</td>
+<td nowrap align=right>100,738</td>
+<td nowrap align=right>21,384</td>
+<td nowrap align=right>21.23</td>
+<td nowrap align=right>49.00</td>
+</tr>
+<tr>
+<td nowrap style=text-align:left;> TPA</td>
+<td nowrap style=text-align:left;>2025</td>
+<td nowrap align=right>91,477</td>
+<td nowrap align=right>102,798</td>
+<td nowrap align=right>14,191</td>
+<td nowrap align=right>13.80</td>
+<td nowrap align=right>43.35</td>
+<td nowrap align=right>91,480</td>
+<td nowrap align=right>102,805</td>
+<td nowrap align=right>21,968</td>
+<td nowrap align=right>21.37</td>
+<td nowrap align=right>48.75</td>
+</tr>
+<tr>
+<td class="table_footer_lead" colspan=2>Total :</td>
+<td class="table_footer">11,257,343</td>
+<td class="table_footer">12,151,631</td>
+<td class="table_footer">2,209,217</td>
+<td class="table_footer">18.18</td>
+<td class="table_footer">43.61</td>
+<td class="table_footer">11,238,608</td>
+<td class="table_footer">12,144,159</td>
+<td class="table_footer">2,102,915</td>
+<td class="table_footer">17.32</td>
+<td class="table_footer">52.61</td>
+</tr>
+</table>
+<p class="info">Report created on Tue Apr 14 17:45:37 EDT 2026<br>Sources: Aviation System Performance Metrics (ASPM)
+<br><a href="javascript:ExcelHTML();">HTML for Excel</a>&nbsp;&nbsp;<a href="javascript:ExcelCSV();">CSV for Excel</a></p>
+</body></html>
